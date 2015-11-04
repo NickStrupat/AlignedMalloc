@@ -13,7 +13,7 @@ void * aligned_malloc(size_t size, size_t alignment) {
 
 #include <crtdbg.h>
 void * aligned_malloc(size_t size, size_t alignment) {
-	return _aligned_malloc_dbg(size, alignment); // This is reduced to a call to `_aligned_malloc` when _DEBUG is not defined
+	return _aligned_malloc_dbg(size, alignment, __FILE__, __LINE__); // This is reduced to a call to `_aligned_malloc` when _DEBUG is not defined
 }
 
 #else
