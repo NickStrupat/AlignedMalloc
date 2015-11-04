@@ -18,7 +18,7 @@ void aligned_free(void * pointer) {
 // https://sites.google.com/site/ruslancray/lab/bookshelf/interview/ci/low-level/write-an-aligned-malloc-free-function
 #include <stdlib.h>
 void aligned_free(void * pointer) {
-    free(((void * *)pointer)[-1]);
+	free(((void * *)pointer)[-1]);
 }
 
 #endif
