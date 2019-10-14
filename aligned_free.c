@@ -1,7 +1,7 @@
 #include "aligned_free.h"
 
 #if defined(__APPLE__) || defined(__linux__)
-
+#include<stdlib.h>
 void aligned_free(void * pointer) {
 	free(pointer);
 }
